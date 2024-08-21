@@ -9,7 +9,7 @@ import time
 # サーボモーター制御クラス
 servo = Servo(
     i2c_addr=0x40,  # I2Cアドレス. 0x41を使用している場合は変更する
-    pwm_freq_target=200,  # PWM周波数[Hz]. ほとんどのモーターが50Hzに対応. 問題なければ100-200Hzに変更してOK. 
+    pwm_freq_target=50,  # PWM周波数[Hz]. ほとんどのモーターが50Hzに対応. 問題なければ100-200Hzに変更してOK. 
 
     # モーター1のパラメーター -90°〜90°で角度
     m1_param=MotorParam(
@@ -28,7 +28,7 @@ servo = Servo(
     ),
 )
 
-servo.reset()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
+servo.init()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
 
 # モーター1, 2を動かす
 servo.m1 = 0

@@ -18,7 +18,7 @@ servo = Servo(
     ),
 )
 
-servo.reset()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
+servo.init()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
 
 servo.m1 = 0  # 0°の位置に移動
 time.sleep(3)

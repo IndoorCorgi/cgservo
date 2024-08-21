@@ -79,11 +79,16 @@ class Servo:
     self.round_ms = 3
     self.round_hz = 3
 
-  def reset(self):
+  def init(self, reset=True):
     """
     PCA9685をリセット後, 周波数設定してスリープ解除
+    複数台使用している場合, 全てのPCA9685がリセットされるので2台目以降はreset=Falseにする
+
+    Args:
+      reset: Trueならソフトウェアリセットする
     """
-    self.pca9685.swrst()
+    if reset:
+      self.pca9685.swrst()
     self.pca9685.allcall = 0
     self.pca9685.set_pre_scale(self.pwm_freq_target)
     if self.extclk:

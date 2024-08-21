@@ -12,7 +12,7 @@ servo = Servo(
     pwm_freq_target=50,  # PWM周波数[Hz]. ほとんどのモーターが50Hzに対応. 問題なければ100-200Hzに変更してOK. 
 )
 
-servo.reset()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
+servo.init()  # コントローラーICをリセットして周波数を設定. 制御開始前に実行する
 
 servo.m1p = 1.5  # パルス幅1.5[ms]でPWM出力. 多くのモーターで中間の位置に移動.
 time.sleep(3)

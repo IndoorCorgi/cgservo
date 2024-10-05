@@ -49,7 +49,7 @@ class Servo:
 
   def __init__(
       self,
-      i2c_addr=0x41,
+      i2c_addr=0x40,
       pwm_freq_target=50.0,
       extclk=True,
       m1_param=MotorParam(),

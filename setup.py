@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='cgservo',
-    version='1.1',
+    version='1.2',
     description='Control servo or BLDC ESC via PCA9685 PWM driver',
     author='Indoor Corgi',
     author_email='indoorcorgi@gmail.com',
